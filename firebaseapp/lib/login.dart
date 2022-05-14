@@ -1,5 +1,6 @@
-// ignore_for_file: avoid_unnecessary_containers
+// ignore_for_file: prefer_const_constructors
 
+import 'package:firebaseapp/home.dart';
 import 'package:firebaseapp/register.dart';
 import 'package:flutter/material.dart';
 
@@ -9,30 +10,56 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  
+  final TextEditingController userController = TextEditingController();
+  final TextEditingController passController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login Page'),
-        centerTitle: true,
-      ),
-      body: Container(
-        child: const Center(
-          child: Text("Login Page")
-        ),
-      ),
-      floatingActionButton: FloatingActionButton.extended(
-        backgroundColor: Colors.blue,
-        foregroundColor: Colors.white,
-        onPressed: () {
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(builder: (context) => RegisterPage()
+      body: Column(
+        children: [
+          SizedBox(
+            height: height/12,
+          ),
+          Text(
+            "Welcome Back",
+            style: TextStyle(
+              fontStyle: FontStyle.normal,
+              fontSize: 30,
+              fontWeight: FontWeight.w600
             ),
-          );
-        },
-        icon: const Icon(Icons.arrow_back),
-        label: const Text("Register"),
+          ),
+          SizedBox(
+            height: height/3,
+          ),
+          TextFormField(
+
+          ),
+          SizedBox(
+            height: height/7,
+          ),
+          TextFormField(
+
+          ),
+          SizedBox(
+            height: height/5,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushReplacement(
+                context, 
+                MaterialPageRoute(builder: (context) => HomePage())
+              );
+            }, 
+            child: Text("Login"),
+          ),
+          Row(
+
+          ),
+        ],
       ),
     );
   }

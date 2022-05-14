@@ -1,5 +1,4 @@
-// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
-
+import 'package:firebaseapp/forgotpass.dart';
 import 'package:firebaseapp/login.dart';
 import 'package:firebaseapp/register.dart';
 import 'package:flutter/material.dart';
@@ -30,8 +29,8 @@ class _MyAppState extends State<MyApp> {
       routes: {
         'login': (context) => LoginPage(),
         'register': (context) => RegisterPage(),
-        /*'forgotpass':(context) => ,
-        'splash':(context) => ,*/
+        'forgotpass':(context) => ForgotPass(),
+        /*'splash':(context) => ,*/
       },
     );
   }

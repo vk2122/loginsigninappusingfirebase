@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_unnecessary_containers
-
 import 'package:firebaseapp/login.dart';
 import 'package:flutter/material.dart';
 
