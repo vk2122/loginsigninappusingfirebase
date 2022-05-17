@@ -1,7 +1,10 @@
+// ignore_for_file: unused_import
+
 import 'package:firebaseapp/forgotpass.dart';
 import 'package:firebaseapp/login.dart';
 import 'package:firebaseapp/register.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 void main() {
   runApp(MyApp());

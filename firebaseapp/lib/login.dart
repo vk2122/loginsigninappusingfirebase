@@ -1,9 +1,10 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, deprecated_member_use
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, deprecated_member_use, unused_import, avoid_print
 
 import 'package:firebaseapp/forgotpass.dart';
 import 'package:firebaseapp/home.dart';
 import 'package:firebaseapp/register.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -37,7 +38,7 @@ class _LoginPageState extends State<LoginPage> {
               height: height / 10,
             ),
             Container(
-              margin: EdgeInsets.fromLTRB(15, 15, 12, 0),
+              margin: EdgeInsets.fromLTRB(25, 15, 25, 0),
               child: TextFormField(
                 controller: userController,
                 decoration: InputDecoration(
@@ -56,9 +57,10 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             Container(
-              margin: EdgeInsets.fromLTRB(15, 15, 12, 0),
+              margin: EdgeInsets.fromLTRB(25, 15, 25, 0),
               child: TextFormField(
                 controller: passController,
+                obscureText: true,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30.0)
@@ -79,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
               children: <Widget>[
                 Text(
                   "Don't Have an Account ?",
-                  style: TextStyle(fontStyle: FontStyle.normal, fontSize: 13),
+                  style: TextStyle(fontStyle: FontStyle.normal, fontSize: 13, fontWeight: FontWeight.w400),
                 ),
                 TextButton(
                   onPressed: () {
